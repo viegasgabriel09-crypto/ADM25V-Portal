@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal ADM25V</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span>ADM</span>25V</div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="#mural">Mural</a>
+    <a href="#esportes">🏆 Esportes</a>
+  </nav>
+  <input id="search" type="search" placeholder="Pesquisar no portal..." oninput="searchPortal()">
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div>
+    <p class="eyebrow">PORTAL DA TURMA</p>
+    <h1>ADM25V</h1>
+    <p>Informações, atividades, avisos e arquivos da turma de Administração.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#cronograma">Ver cronograma</a>
+      <a class="btn" href="#mural">Ver mural</a>
+    </div>
+  </div>
+  <div class="logo">25V</div>
+</section>
+
+<section class="stats">
+  <div><strong id="activityCount">3</strong><span>Atividades</span></div>
+  <div><strong id="noticeCount">3</strong><span>Avisos</span></div>
+  <div><strong id="fileCount">0</strong><span>Arquivos de esportes</span></div>
+</section>
+
+<section id="cronograma">
+  <div class="section-title"><div><p class="eyebrow">ORGANIZAÇÃO</p><h2>Próximas atividades</h2></div></div>
+  <div id="activities" class="grid"></div>
+</section>
+
+<section id="mural">
+  <div class="section-title"><div><p class="eyebrow">NOVIDADES</p><h2>Mural da turma</h2></div></div>
+  <div id="notices" class="grid"></div>
+</section>
+
+<section id="esportes" class="sports">
+  <div class="section-title"><div><p class="eyebrow">ÁREA ESPORTIVA</p><h2>Arquivos de esportes</h2></div></div>
+  <div class="upload-box">
+    <p>O líder de esportes pode adicionar PDFs aqui.</p>
+    <label class="btn primary" for="pdfInput">+ Adicionar PDF</label>
+    <input id="pdfInput" type="file" accept="application/pdf" hidden onchange="addPdf(event)">
+    <div id="files"></div>
+  </div>
+</section>
+</main>
+
+<footer>ADM25V • Instituto Federal do Maranhão</footer>
+<script src="script.js"></script>
+</body>
+</html>
